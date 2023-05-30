@@ -1,0 +1,22 @@
+.abc1
+{
+    color:red;
+}
+
+p{
+    color:orange;
+    font-size:100px;
+}
+.abc{
+    border:1px solid red;
+    height:500px;
+    display: flex;
+    padding:10px;
+    
+}
+.abc>section
+{
+    flex:1;
+    border:1px solid blue;
+    margin:5px;
+}
