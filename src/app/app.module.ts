@@ -12,6 +12,8 @@ import { NgbootstrapComponent } from './ngbootstrap/ngbootstrap.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularmatrialComponent } from './angularmatrial/angularmatrial.component';
 import {MatButtonModule} from '@angular/material/button';
+import { MyformComponent } from './myform/myform.component';
+import { HrmodModule } from './hrmod/hrmod.module';
 
 @NgModule({
   declarations: [
@@ -21,14 +23,16 @@ import {MatButtonModule} from '@angular/material/button';
     MybootstrapComponent,
     MycardComponent,
     NgbootstrapComponent,
-    AngularmatrialComponent
+    AngularmatrialComponent,
+    MyformComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    HrmodModule
   ],
   providers: [],
   bootstrap: [AppComponent]
