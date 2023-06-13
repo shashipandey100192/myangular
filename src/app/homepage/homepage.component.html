@@ -4,3 +4,18 @@
 <h1> {{total | currency}}</h1>
 <h1> {{total | currency:'INR'}}</h1>
 <h1>{{mydate | date:'medium'}}</h1>
+
+
+<input type="text" ngClass="cusinput" [(ngModel)]="kumar" />
+<h1 [ngStyle]="{'color':'red',backgroundColor:'green',fontSize:'50px'}">this is inline css</h1>
+<p>{{kumar}}</p>
+
+
+<h1 [ngStyle]="{'background-color':'red',fontSize:'50px',marginLeft:fs+'px'}">this is heading in angular  directives</h1>
+<p ngClass="abc">this is class directive</p>
+<p [ngClass]="{'abc': xyz}">this is class directive</p>
+<p [ngClass]="{'first second third':xyz,'a b':myvar}">this is class directive</p>
+
+<input type="text" [(ngModel)]="myinput" (input)="mytext()">
+
+<h1>display herer:<span>{{myinput}}</span></h1>

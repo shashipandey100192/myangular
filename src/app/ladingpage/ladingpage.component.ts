@@ -17,7 +17,7 @@ export class LadingpageComponent {
     x:string = "5";
     
   myfun =()=>{
-    alert("hi");
+    // alert("hi");
   }
 
   myfun1 = function()

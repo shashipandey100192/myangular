@@ -8,6 +8,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { LadingpageComponent } from './ladingpage/ladingpage.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { MynavComponent } from './mynav/mynav.component';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -16,12 +17,15 @@ import { MynavComponent } from './mynav/mynav.component';
     HomepageComponent,
     LadingpageComponent,
     NotfoundComponent,
-    MynavComponent
+    MynavComponent,
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

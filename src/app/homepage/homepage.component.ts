@@ -1,5 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
@@ -16,18 +17,24 @@ mydate = Date.now();
 myfun = ()=>{
 alert("hi");
 }
+abc: any;
+kumar: any;
+myinput:any;
 
 ngOnInit() {
   this.myfun();  
   this.myfirst();  
   this.mynumber();
+
+ 
+
 }
 
     myfirst():void
     {
     this.b=500;
       // alert(this.b);
-      this.c= prompt("enter name");
+      // this.c= prompt("enter name");
       // document.bgColor=this.c;
       document.body.style.backgroundColor=`${this.c}`;
     }
@@ -40,6 +47,20 @@ ngOnInit() {
 
    }
     
+x:number=500;
+
+
+fs:number=20;
+xyz:boolean=true;
+myvar:boolean =true;
+
+mytext():void
+{
+  if(this.myinput=="kumar")
+  {
+    alert("hi kumar")
+  }
+}
 
 
 }
