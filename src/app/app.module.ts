@@ -9,6 +9,8 @@ import { LadingpageComponent } from './ladingpage/ladingpage.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { MynavComponent } from './mynav/mynav.component';
 import {FormsModule} from '@angular/forms';
+import { MyformsComponent } from './myforms/myforms.component';
+
 
 
 @NgModule({
@@ -18,6 +20,7 @@ import {FormsModule} from '@angular/forms';
     LadingpageComponent,
     NotfoundComponent,
     MynavComponent,
+    MyformsComponent,
    
   ],
   imports: [
@@ -25,6 +28,7 @@ import {FormsModule} from '@angular/forms';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule
+      
 
   ],
   providers: [],

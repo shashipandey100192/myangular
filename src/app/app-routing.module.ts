@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomepageComponent } from './homepage/homepage.component';
 import { LadingpageComponent } from './ladingpage/ladingpage.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { MyformsComponent } from './myforms/myforms.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path:'home',
     component:HomepageComponent
+  },
+  {
+    path:'myform',
+    component:MyformsComponent
   },
   {
     path:'**',
