@@ -1,0 +1,150 @@
+Angular
+===================
+1) what is Angular
+2) what is CLI
+3) angular.js vs angular or angular CLI
+4) angular dev by google
+--------------------------------
+5) install node.js
+6) git bash
+7) create git account
+----------------------------------------------------
+8) code .   {open vs code}
+9) npm  (node package manager)
+10) flag  ( short key)
+11) node_modules
+12) package.json
+13) js import and export 
+	1) default export /import
+	2) name export / import {}
+14) use strict
+-----------------------------------------------------
+15) error code
+16) tsc index.ts && node index.js   (both file compile)
+-----------------------------------------------------------
+17) install angular
+	npm install -g @angular/cli
+	ng new projectname
+		y
+		choolse css compilar 
+	ng serve
+	default port no: 4200
+---------------------------------------------------------
+18) change port no
+	ng serve --port 8800
+19) create component
+	ng g c componentname
+Note: what is selector
+20) call component in another component
+-----------------------------------------------------------
+git
+=================
+1) login git
+2) create repo
+Note: repo name and local project name must be same
+3) check remote connection
+	git remote -v
+4) git init
+5) git remote add origin <pathof repo>
+6) git add --all
+7) git commit -m "message"
+8) git push origin "name of branch"
+9) git clone <git path>
+10) npm install    (install node_modules folder) 
+
+-----------------------------------------------------------
+11) angular ui
+	1) custom (html,css)
+	2) bootstrap
+	3) ng bootstap
+	4) angular metrial
+	5) ngx-bootstrap
+12) bootstrap install
+	npm install bootstrap     ///lates version
+	npm uninstall bootstrap   // uninstall
+	npm install bootstrap@5.0.0   //particular version
+	
+ Note:  git add --all
+	git commit -m "message"
+	git pull origin master
+-------------------------------------------------------------
+13) angular bootstrap
+	1) ng add @ng-bootstrap/ng-bootstrap
+	2) inject function /design
+14) angular material
+	1) ng add @angular/material
+	2) import modules
+-------------------------------------------------------------
+15) angular application modules
+	1) core
+		1) NgModules
+			1) declarations
+			2) imports
+			3) export
+			4) bootstrap
+			5) providers
+	2) route
+		1) RouterModule
+		2) ActivatedRoute
+		3) Router
+	3) animation
+	4)
+
+16) angular generator
+	class
+	component
+	directive
+	environments
+	guard
+	interceptor
+	interface
+	module
+	pipe
+	resolver
+	service	
+17) modules structure
+-----------------------------------------------------------
+18) routing 
+	route-outlet
+-----------------------------------------------------------
+19) expression {{}}
+-----------------------------------------------------------
+20) OnInit 
+	1) import
+	2) impliments
+	3) initialization
+
+21) Class implementations (pipe)
+	AsyncPipe
+	DatePipe
+	JsonPipe
+	LowerCasePipe
+	CurrencyPipe
+	DecimalPipe
+	PercentPipe
+	SlicePipe
+	UpperCasePipe
+	TitleCasePipe
+	KeyValuePipe
+--------------------------------------------
+	ngClass=""
+	ngStyle=""
+	ngModel=""
+about MVC
+----------------------------------------------
+22) icon 
+	1) npm install fontawesome-4.7
+	2) import css file
+	3) use icon
+23) ngx-bootstrap
+
+
+ 
+
+	
+	
+	
+	
+
+
+
