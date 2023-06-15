@@ -10,6 +10,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { MynavComponent } from './mynav/mynav.component';
 import {FormsModule} from '@angular/forms';
 import { MyformsComponent } from './myforms/myforms.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -27,7 +28,8 @@ import { MyformsComponent } from './myforms/myforms.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
       
 
   ],
