@@ -1,51 +1,40 @@
-<form [formGroup]="myform">
-<div class="container p-5 border bg-light">
-    <div class="row shadow p-3 ">
-        <div class="col-md-6">
-            <label class="form-label">Full Name</label>
-            <input type="text" class="form-control" formControlName="fullname">
-            <div class="form-text text-danger">We'll never share your email with anyone else.</div>
+<form [formGroup]="myform" (ngSubmit)="loginsubmit()">
+    <div class="container">
+        <div class="row border p-4">
+            <div class="col-6">
+                <label>Username</label>
+                <input
+                    type="text"
+                    formControlName="username"
+                    class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.username.errors }"
+                />
+                <section *ngIf=" submitted && f.username.errors" class="errormsg">
+                    <div *ngIf="f.username.errors.required">Username is required</div>
+                    <div *ngIf="f.username.errors.minlength">
+                      Username must be at least 5 characters
+                    </div>
+                    <div *ngIf="f.username.errors.maxlength">
+                      Username must not exceed 10 characters
+                    </div>
+                </section>
+            </div>
+            <div class="col-6">
+                <label>email</label>
+                <input
+                    type="email"
+                    formControlName="email"
+                    class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+                />
+                <section *ngIf=" submitted && f.email.errors" class="errormsg">
+                    <div *ngIf="f.email.errors.required">email is required</div>
+                </section>
+            </div>
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-primary">submit</button>
+            </div>
+    
         </div>
-        <div class="col-md-6">
-            <label class="form-label">Email id</label>
-            <input type="email" class="form-control" formControlName="email">
-            <div class="form-text text-danger">We'll never share your email with anyone else.</div>
-        </div>
-        <div class="col-md-6">
-            <label class="form-label">Address</label>
-            <input type="text" class="form-control" formControlName="address">
-            <div class="form-text text-danger">We'll never share your email with anyone else.</div>
-        </div>
-        <div class="col-md-6">
-            <label class="form-label">Phone no</label>
-            <input type="text" class="form-control" formControlName="phone">
-            <div class="form-text text-danger">We'll never share your email with anyone else.</div>
-        </div>
-        <div class="col-md-6">
-            <label class="form-label">Password</label>
-            <input type="password" class="form-control" formControlName="password">
-            <div class="form-text text-danger">We'll never share your email with anyone else.</div>
-        </div>
-        <div class="col-md-6">
-            <label class="form-label">Select Question</label>
-            <select class="form-control" formControlName="option">
-                <option>what is childhood name</option>
-                <option>what is childhood name</option>
-                <option>what is childhood name</option>
-                <option>what is childhood name</option>
-                <option>what is childhood name</option>
-            </select>
-            <div class="form-text text-danger">We'll never share your email with anyone else.</div>
-        </div>
-        <div class="col-md-12 text-center p-3">
-            
-            <button type ="button" class="btn btn-success" (click)="mydata()">Registor</button>
-           
-        </div>
-        
     </div>
-</div>
 </form>
-<div>
-   {{fullname}}
-</div>

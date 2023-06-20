@@ -11,6 +11,7 @@ import { MynavComponent } from './mynav/mynav.component';
 import {FormsModule} from '@angular/forms';
 import { MyformsComponent } from './myforms/myforms.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MyarryformComponent } from './myarryform/myarryform.component';
 
 
 
@@ -22,6 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     NotfoundComponent,
     MynavComponent,
     MyformsComponent,
+    MyarryformComponent,
    
   ],
   imports: [

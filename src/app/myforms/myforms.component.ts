@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FormGroup,FormControl} from '@angular/forms'
+import {FormGroup,FormControl,Validators} from '@angular/forms'
 
 @Component({
   selector: 'app-myforms',
@@ -7,32 +7,26 @@ import {FormGroup,FormControl} from '@angular/forms'
   styleUrls: ['./myforms.component.scss']
 })
 export class MyformsComponent {
-  mydata1:any;
-  fullname:any;
+  submitted = false;
 
   myform = new FormGroup({
-    fullname: new FormControl('ravi singh'),
-    email:new FormControl('ravi@gmai.com'),
-    address:new FormControl(''),
-    phone:new FormControl(''),
-    password:new FormControl(''),
-    option:new FormControl('')
+    username: new FormControl('ravi singh',[Validators.required,Validators.minLength(5),Validators.maxLength(10)]),
+    email: new FormControl('',[Validators.required])
   });
 
-
-mydata():void{
-  console.log(this.myform.value);
-  this.mydata1=this.myform.value;
-this.fullname = this.mydata1.fullname;
-  console.log(this.mydata1.fullname);
+  get f(): any {
+    return this.myform.controls;
+  }
   
-// localStorage.setItem("myd",`${this.myform}`);
-// localStorage.setItem("myd",JSON.stringify(()=>{
-//   return this.myform
-// }));
+  loginsubmit():void{
+    this.submitted=true;
+    if(this.myform.errors)
+    {
+      return
+    }
+    console.log(this.myform.value)
 
-}
-
+  }
 
 
 
