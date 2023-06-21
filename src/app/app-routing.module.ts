@@ -1,32 +1,45 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomepageComponent } from './homepage/homepage.component';
-import { LadingpageComponent } from './ladingpage/ladingpage.component';
-import { NotfoundComponent } from './notfound/notfound.component';
-import { MyformsComponent } from './myforms/myforms.component';
-import { MyarryformComponent } from './myarryform/myarryform.component';
+import { BlankpageComponent } from './layout/blankpage/blankpage.component';
+import { FullpageComponent } from './layout/fullpage/fullpage.component';
+
 
 const routes: Routes = [
   {
     path:'',
-    component:LadingpageComponent
+    component:BlankpageComponent,
+    children:[
+      {
+        path:'', redirectTo:'auth', pathMatch:'full'
+      },
+      {
+        path:'auth',
+        component:BlankpageComponent,
+        loadChildren: () => import('./modules/auth/auth.module').then(m=>m.AuthModule)
+      }
+      
+    ]
   },
   {
-    path:'home',
-    component:HomepageComponent
-  },
-  {
-    path:'myform',
-    component:MyformsComponent
-  },
-  {
-    path:'arrform',
-    component:MyarryformComponent
-  },
-  {
-    path:'**',
-    component:NotfoundComponent
+    path:'',
+    component:FullpageComponent,
+    children:[
+      {
+        path:'', redirectTo:'dashboard', pathMatch:'full'
+      },
+      {
+        path:'dashboard',
+        component:FullpageComponent,
+        loadChildren: ()=> import('./modules/dashboad/dashboad.module').then(m=>m.DashboadModule)
+      },
+      {
+        path:'product',
+        component:FullpageComponent,
+        loadChildren: ()=> import('./modules/product/product.module').then(m =>m.ProductModule)
+      }
+    ]
   }
+  
   
 ];
 
