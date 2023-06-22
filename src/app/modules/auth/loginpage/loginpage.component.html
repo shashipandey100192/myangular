@@ -1,1 +1,45 @@
-<h1>loginpage works!</h1>
+<div class="container mt-5 border p-5 shadow">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1>User Login Page</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mt-2 ">
+            <img src="../assets/image/img2.jpg" class="img-fluid">
+        </div>  
+        <div class="col-md-6 mt-2">
+           <div class="row border-start border-primary p-2">
+            <div class="col-md-12 mt-4">
+                <label class="form-label">username</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="col-md-12 mt-4">
+                <label class="form-label">password</label>
+                <input type="password" class="form-control">
+            </div>
+            <div class="col-md-12 mt-4">
+                <div class="row g-3">
+                    <div class="col-sm-5">
+                      <p>display captch</p>
+                    </div>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control" placeholder="enter captcha">
+                    </div>
+                    <div class="col-sm-2">
+                     <input type="button" class="btn btn-primary" value="verify">
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col-md-12 mt-5 text-center">
+                <button type="button" class="btn btn-success me-3">Login</button>
+                <button type="reset" class="btn btn-danger">Cancle</button><br>
+                <a [routerLink]="['/auth/registor']">go to registor</a>
+            </div>
+           </div>
+        </div>
+        
+       
+    </div>
+</div>

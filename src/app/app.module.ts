@@ -14,6 +14,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MyarryformComponent } from './myarryform/myarryform.component';
 import { FullpageComponent } from './layout/fullpage/fullpage.component';
 import { BlankpageComponent } from './layout/blankpage/blankpage.component';
+import { MysidebarComponent } from './share/mysidebar/mysidebar.component';
+import { MynavbarComponent } from './share/mynavbar/mynavbar.component';
 
 
 
@@ -28,6 +30,8 @@ import { BlankpageComponent } from './layout/blankpage/blankpage.component';
     MyarryformComponent,
     FullpageComponent,
     BlankpageComponent,
+    MysidebarComponent,
+    MynavbarComponent,
    
   ],
   imports: [

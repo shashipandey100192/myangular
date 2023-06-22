@@ -14,7 +14,6 @@ const routes: Routes = [
       },
       {
         path:'auth',
-        component:BlankpageComponent,
         loadChildren: () => import('./modules/auth/auth.module').then(m=>m.AuthModule)
       }
       
@@ -29,12 +28,10 @@ const routes: Routes = [
       },
       {
         path:'dashboard',
-        component:FullpageComponent,
         loadChildren: ()=> import('./modules/dashboad/dashboad.module').then(m=>m.DashboadModule)
       },
       {
         path:'product',
-        component:FullpageComponent,
         loadChildren: ()=> import('./modules/product/product.module').then(m =>m.ProductModule)
       }
     ]
