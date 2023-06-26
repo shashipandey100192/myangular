@@ -1,0 +1,13 @@
+h1{
+    color:red !important;
+}
+.sidebar1
+{
+    width:200px;
+    height:100%;
+    border:1px solid red;
+    float:left;
+    position: fixed;
+    margin-top:63px;
+}
+
