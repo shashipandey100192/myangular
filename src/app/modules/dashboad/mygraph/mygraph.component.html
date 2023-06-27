@@ -1,3 +1,66 @@
 <section >
     <h1>graph page</h1>
+    <ul class="nav p-3 bg-primary">
+        <li *ngFor="let a of mylist" class="nav-item me-3">{{a}}</li>
+    </ul>
+    <select class="form-control">
+        <option *ngFor="let b of mylist">{{b}}</option>
+    </select>
+
+    <div class="p-3">
+        <span *ngFor="let c of mylist" class="p-2">
+            {{c}}<input  type="radio" class="form-check-input" name="a"/>
+        </span>
+      
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-hover table-bordered">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Phone no</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                        <tr *ngFor="let x of myobject">
+                            <td>{{x.name}}</td>
+                            <td>{{x.age}}</td>
+                            <td>{{x.phone}}</td>
+                            <td>{{x.address}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <select class="form-control">
+                    <option *ngFor="let u of myobject">{{u.name}}</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select class="form-control">
+                    <option *ngFor="let u of myobject">{{u.age}}</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select class="form-control">
+                    <option *ngFor="let u of myobject">{{u.phone}}</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select class="form-control">
+                    <option *ngFor="let u of myobject">{{u.address}}</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+
+
 </section>
