@@ -16,6 +16,7 @@ import { FullpageComponent } from './layout/fullpage/fullpage.component';
 import { BlankpageComponent } from './layout/blankpage/blankpage.component';
 import { MysidebarComponent } from './share/mysidebar/mysidebar.component';
 import { MynavbarComponent } from './share/mynavbar/mynavbar.component';
+import {HttpClientModule} from '@angular/common/http';
 
 
 
@@ -39,7 +40,8 @@ import { MynavbarComponent } from './share/mynavbar/mynavbar.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
       
 
   ],

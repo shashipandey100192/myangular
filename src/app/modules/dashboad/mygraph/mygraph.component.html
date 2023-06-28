@@ -37,28 +37,34 @@
                 </table>
             </div>
         </div>
+        <form class="border shadow p-3 bg-info" [formGroup]="myform">
         <div class="row">
             <div class="col-md-3">
-                <select class="form-control">
+                <select class="form-control" formControlName="username">
                     <option *ngFor="let u of myobject">{{u.name}}</option>
                 </select>
             </div>
             <div class="col-md-3">
-                <select class="form-control">
+                <select class="form-control" formControlName="age">
                     <option *ngFor="let u of myobject">{{u.age}}</option>
                 </select>
             </div>
             <div class="col-md-3">
-                <select class="form-control">
+                <select class="form-control" formControlName="phone">
                     <option *ngFor="let u of myobject">{{u.phone}}</option>
                 </select>
             </div>
             <div class="col-md-3">
-                <select class="form-control">
+                <select class="form-control" formControlName="address">
                     <option *ngFor="let u of myobject">{{u.address}}</option>
                 </select>
             </div>
+            <div class="col-md-12 mt-3 text-center">
+                <button type="submit" class="btn btn-primary" (click)="mylog()">submit</button>
+            </div>
+
         </div>
+    </form>
     </div>
 
 

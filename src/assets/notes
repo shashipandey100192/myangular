@@ -136,7 +136,41 @@ about MVC
 	1) npm install fontawesome-4.7
 	2) import css file
 	3) use icon
-23) ngx-bootstrap
+23) ngx-bootstrap 
+24) types of form
+	1) reactive form
+		1) form group
+		2) array group
+	2) template driven form
+----------------------------------------------------
+create modules
+	1) ng g m modulename
+	2) ng g m modulename --routing
+	3) module routing
+	4) loadchildren
+	5) import
+------------------------------------------------------
+25)     routing
+	layouting
+----------------------------
+26) ngFor 
+----------------------------------------
+27) form
+	1) import   ReactiveFormsModule,FormsModule    modules
+	2) import  formGroup, formControl, ...         component.ts
+	3) formGroup="" formControlName=""	       component.html
+
+28) service
+	ng g s genral
+	Injectable
+	private
+	public
+	import http modules                     modules
+	import HttpClient			service.ts
+
+	
+
+
 
 
  
