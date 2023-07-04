@@ -59,14 +59,24 @@
               <table class="table table-bordered">
               <thead>
                 <tr>
-                  <th>code</th>
-                  <th>code</th>
+                  <th>S.no</th>
+                  <th>title</th>
+                  <th>bodytext</th>
+                  <th>action</th>
+                  
+                  
                 </tr>
               </thead>
               <tbody>
                 <tr *ngFor="let a of myarry">
                   <td>{{a.id}}</td>
                   <td>{{a.title}}</td>
+                  <td>{{a.body}}</td>
+                  <td [style]="'width:250px;text-align:center'">
+                    <button type="button" [ngClass]="'btn btn-primary btn-sm me-2'" [routerLink]="['dashboard/',a.id]">view</button>
+                    <button type="button" [ngClass]="'btn btn-warning btn-sm me-2'">Edit</button>
+                    <button type="button" [ngClass]="'btn btn-danger btn-sm'">Del</button>
+                  </td>
                 </tr>
               </tbody>
             </table>

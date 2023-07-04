@@ -10,9 +10,9 @@ export class LandingpageComponent implements OnInit{
 constructor(private myservice:GenralService){}
 
 myarry:any
+
 myalldata():void{
   this.myservice.mydata().subscribe((e)=>{
-    
     this.myarry=e;
     console.log(this.myarry);
   })

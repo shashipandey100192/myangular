@@ -172,6 +172,38 @@ create modules
 
 
 
+routing
+-------------------------
+1) import {HttpClientModule} from '@angular/common/http';   // app module
+2) import  {HttpClient} from '@angular/common/http';  		// service
+3) constructor(public http:HttpClient) { }		    // alise name
+4) mydata()
+	{
+ 		return this.http.get(this.myurl);
+	}
+5) import { GenralService } from 'services/genral.service';    // import service
+6) constructor(private myservice:GenralService){}		//alise name
+7) myalldata():void{
+  this.myservice.mydata().subscribe((e)=>{
+    this.myarry=e;
+    console.log(this.myarry);
+  })
+}
+8) data bind in html
+9) import {ActivatedRoute} from '@angular/router';		// current id
+10) constructor(private rout:ActivatedRoute){}			// alise name
+11) this.id =this.rout.snapshot.paramMap.get('id');		// current id get
+12) singledata()
+    {
+      return this.http.get(`${this.myurl}/${10}`)		// create service 
+    }
+
+13 mysingledata():void{						// component.ts
+  this.myservice.singledata().subscribe((d)=>{
+    console.log(d);
+    this.record = d;
+  })
+}
 
  
 
