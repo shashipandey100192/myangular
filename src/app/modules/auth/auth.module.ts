@@ -5,6 +5,7 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { ForgatComponent } from './forgat/forgat.component';
 import { RegistorComponent } from './registor/registor.component';
+import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,7 +16,9 @@ import { RegistorComponent } from './registor/registor.component';
   ],
   imports: [
     CommonModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class AuthModule { }

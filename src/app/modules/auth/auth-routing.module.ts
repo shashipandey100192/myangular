@@ -4,6 +4,7 @@ import { LoginpageComponent } from './loginpage/loginpage.component';
 import { ForgatComponent } from './forgat/forgat.component';
 import { RegistorComponent } from './registor/registor.component';
 
+
 const routes: Routes = [
   {
     path:'',

@@ -167,7 +167,16 @@ create modules
 	public
 	import http modules                     modules
 	import HttpClient			service.ts
-
+----------------------------------------------------------------
+29)	storage
+		localstorage
+			setItem()
+			getItems()
+			JSON.parse()
+			JSON.stringify()
+	form validation
+	form reset
+	
 	
 
 
