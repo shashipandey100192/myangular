@@ -10,23 +10,24 @@ import {ActivatedRoute} from '@angular/router';
 export class DetailspageComponent implements OnInit {
   constructor(private myservice:GenralService,private rout:ActivatedRoute){}
 
-id:string | undefined | null
+myid:any;
 record:any;
 
 ngOnInit(): void {
     
-  
-  this.id =this.rout.snapshot.paramMap.get('id');
-  console.log(this.id);
+  this.myid =this.rout.snapshot.paramMap.get('id');
+  console.log(this.myid);
   this.mysingledata();
 }
 
 
 mysingledata():void{
-  this.myservice.singledata().subscribe((d)=>{
-    console.log(d);
-    this.record = d;
+  this.myservice.singledata(this.myid).subscribe((x)=>{
+    console.log(x);
+    this.record = x;
+
   })
+   
 }
 
 

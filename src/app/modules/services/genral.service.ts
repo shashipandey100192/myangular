@@ -18,9 +18,16 @@ export class GenralService {
     }
 
 
-    singledata()
+    singledata(id:any)
     {
-      return this.http.get(`${this.myurl}/${10}`)
+      let ids = id;
+      return this.http.get(`${this.myurl}/${ids}`)
+    }
+
+    mydelete(id:any)
+    {
+      let ids = id;
+      return this.http.delete(`${this.myurl}/${ids}`)
     }
 
 

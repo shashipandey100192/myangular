@@ -1,5 +1,6 @@
 import { Component,OnInit } from '@angular/core';;
 import { GenralService } from '../../services/genral.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-landingpage',
@@ -7,10 +8,10 @@ import { GenralService } from '../../services/genral.service';
   styleUrls: ['./landingpage.component.scss']
 })
 export class LandingpageComponent implements OnInit{
-constructor(private myservice:GenralService){}
+constructor(private myservice:GenralService,private myrout:ActivatedRoute){}
 
 myarry:any
-
+mycurid:any;
 myalldata():void{
   this.myservice.mydata().subscribe((e)=>{
     this.myarry=e;
@@ -19,8 +20,22 @@ myalldata():void{
 }
 ngOnInit(): void {
   this.myalldata();  
+ 
+}
+
+
+mydeleterecord(id:any):void
+{
+  // this.mycurid=this.myrout.snapshot.paramMap.get('id');
+  // console.log(this.mycurid);
+  this.myservice.mydelete(id).subscribe(()=>{
+    console.log(id);
+    alert("data is deleted");
+  })
 
 }
+ 
+
 
 
 
