@@ -9,6 +9,7 @@ export class GenralService {
 
   constructor(public http:HttpClient,public routs:ActivatedRoute) { }
   public myurl ="https://jsonplaceholder.typicode.com/posts";
+  public mysecond = "https://jsonplaceholder.typicode.com/users";
 
 
 
@@ -16,7 +17,6 @@ export class GenralService {
     {
     return this.http.get(this.myurl);
     }
-
 
     singledata(id:any)
     {
@@ -28,6 +28,11 @@ export class GenralService {
     {
       let ids = id;
       return this.http.delete(`${this.myurl}/${ids}`)
+    }
+
+    mynewapi()
+    {
+      return this.http.get(this.mysecond);
     }
 
 

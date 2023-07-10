@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class LandingpageComponent implements OnInit{
 constructor(private myservice:GenralService,private myrout:ActivatedRoute){}
-
+myaddress:any;
 myarry:any
 mycurid:any;
 myalldata():void{
@@ -20,6 +20,8 @@ myalldata():void{
 }
 ngOnInit(): void {
   this.myalldata();  
+  this.mysecondapifunction();
+ 
  
 }
 
@@ -34,11 +36,20 @@ mydeleterecord(id:any):void
   })
 
 }
+
+
+mysecondapifunction():void
+{
+  this.myservice.mynewapi().subscribe((data)=>{
+    // console.log(data);
+    this.myaddress = data;
+    console.log(this.myaddress[0].email);
+    
+
+  })
+}
+
  
 
-
-
-
-
-
 }
+

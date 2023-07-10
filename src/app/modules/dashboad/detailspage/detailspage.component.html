@@ -8,10 +8,13 @@
   </section> -->
 
 
-  <div class="container">
+  <div class="container border mt-5">
       <div class="row">
             <div class="col-12">
-                  <div class="h-100 p-5 text-bg-dark rounded-3" style="margin-top:75px;margin-left:20px">
+                  <button class="btn btn-sm btn-primary" [routerLink]="['/dashboard']">back</button>
+            </div>
+            <div class="col-12">
+                  <div class="h-100 text-bg-dark rounded-3" style="margin-top:75px;margin-left:20px">
                         <h1>{{record.id}}</h1>
                         <h2>{{record.title}}</h2>
                         <p>{{record.body}}</p>
