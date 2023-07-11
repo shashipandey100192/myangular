@@ -1,0 +1,14 @@
+<div>
+<h2>this is child component {{abc}}</h2>
+   <!-- <pre> {{arradata | json}} </pre> -->
+   <select class="form-control" >
+        <option *ngFor="let a of myproduct">{{a}}</option>
+   </select>
+   <!-- <pre>{{myarray | json}} </pre> -->
+   <select class="form-control" >
+    <option *ngFor="let a of myarray">{{a.id}}</option>
+</select>
+<select class="form-control" >
+    <option *ngFor="let a of myarray">{{a.title}}</option>
+</select>
+</div>
